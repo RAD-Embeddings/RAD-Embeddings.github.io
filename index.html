@@ -39,24 +39,23 @@
         <section id="abstract">
             <h2>Abstract</h2>
         
-            <p>
-            Expert demonstrations have proven an easy way to indirectly specify
-            complex tasks. Recent algorithms even support extracting
-            unambiguous formal specifications, e.g. deterministic finite
-            automata (DFA), from demonstrations. Unfortunately, these
-            techniques are generally not sample efficient. In this work, we
-            introduce L<sup>*</sup>LM an algorithm for learning DFAs from both
-            demonstrations <i>and</i> natural language. Due to the expressivity
-            of natural language, we observe a significant improvement in the
-            data efficiency of learning DFAs from expert demonstrations.
-            Technically, L<sup>*</sup>LM leverages large language models to
-            answer membership queries about the underlying task. This is then
-            combined with recent techniques for transforming learning from
-            demonstrations into a sequence of labeled example learning
-            problems. In our experiments, we observe the two modalities
-            complement each other, yielding a powerful few-shot learner.
-            </p>
-
+            <p> Goal-conditioned reinforcement learning is a powerful way to
+            control an AI agent's behavior at runtime. That said, popular goal
+            representations, e.g., target states or natural language, are
+            either limited to Markovian tasks or rely on ambiguous task
+            semantics. We propose representing temporal goals using
+            compositions of deterministic finite automata (cDFA). cDFAs balance
+            the need for formal temporal semantics with ease of
+            interpretation-- if one can understand a flow chart, one can
+            understand a cDFA. On the other hand, cDFA form a countably
+            infinite concept class with Boolean semantics, and subtle changes
+            to the automata can result in very different agent behavior. To
+            address this, we observe that all paths through a DFA correspond to
+            a series of reach-avoid tasks. Based on this, we propose
+            pre-training graph neural network embedding on ``reach-avoid
+            derived'' DFAs. Empirically, we demonstrate that the proposed
+            pre-training method enables zero-shot generalization to various
+            cDFA task classes and accelerated policy specialization.</p>
         </section>
         <section>
             <img src="assets/algorithm_overview.svg"/>
